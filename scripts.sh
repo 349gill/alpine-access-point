@@ -39,7 +39,6 @@ nano /etc/init.d/udhcpd
 #     before dns
 # }
 
-# Make it executable
 chmod +x /etc/init.d/udhcpd
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -49,7 +48,6 @@ rc-service hostapd start
 rc-service udhcpd start
 sysctl net.ipv4.ip_forward=1 
 
-# Make the changes persistent
 rc-update add hostapd
 rc-update add udhcpd
 rc-update add sysctl
